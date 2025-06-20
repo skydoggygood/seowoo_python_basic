@@ -1,0 +1,61 @@
+#! /usr/bin/env python
+
+s = "GGGGTTGACGGGGCTTGTACTATAAAGATATCCCGGAATTTGATATACCCAGGAAAATGTTGAAGGGCACTTGCAGTTTGAGAGGCAAAGAGCCCTCCCTGGGGGGCACCGTATAAACGCGCAGCGTACACGACGTGTAATCATGCGAACATCTTGTTTTCTCGATGGCCCTTAAGTTGGCCAAAAATGCACCCTGTTCCGACATCGTTTGTAACCGATCCCTTATAGAGCATAGCGCATGGGAGGAAAAGCGAAACCCAGGATAGCTATGAGTAATTCTGAGTCGCCGGTTGGAGTTAGTTGACGGGTGGTAGCTGGAGTTCGGAATCGAAAAGGGTTGAGCCGCCCAACATGTCTTCACTGGGAATCGCCCCACAATCCTGTCATCTGATTATAGCTAAGCGATAACCGTATATAAGTTGAATGCCACCCCTTTACGGATCCGGGGTAAAAAGACCGATACCTGTGGAGTGAAACTCAATGCCACGAATATTACAGTGCTTCGCGACATTACTCATGCGACATGCGTTACAAGGGTTAAGATCCTTTGGGGAACCCACCTGTATTCCTGTTGTCCTCGCCGGCATTCTACCAGTTCGACATCTCTGTTATTGTACAGCCTGACAGAAGGAGTTTCGTTCGTGTTTAGGTGTAGCTTTGTGTTTGCTACTTCTAGACGTCGCGATAGTAAGTGCCTCTTGAGTCTAGTTGATCACGTATATCTTGCGAAGTGCCGGCTGTGCGAGTCTGGTTCACTCGGTGTATCCGGCGGCAGGTCGACATATCGGGGGCCACCGTCCAAAGAGTGGATCT"
+
+s = s.replace("\n", "").strip()
+
+s = s.replace("A","x")
+s = s.replace("T","y")
+s = s.replace("C","z")
+s = s.replace("G","w") 
+
+s = s.replace("x","T")
+s = s.replace("y","A") 
+s = s.replace("z","G")
+s = s.replace("w","C")
+
+s = s[::-1]
+
+print(s) 
+
+#선생님 정답 
+
+#s = "AAAACCCGGT" 
+#
+#s[::1]
+#
+#print("original seq:")
+#print(s) 
+#
+#print("reversed seq:"
+#print(s[::1])
+#
+#print(s[::1].replace('A','T')).replace('T','A')
+#이러면 순환 반복의 문제가 생김! 
+#해결책 : 임의로 다른 글자로 바꿔놓기 
+#
+#print(s[::1].replace('A','B').replace('T','A').replace('B','T'))
+#print(s[::1].replace('G','X').replace('C','G').replace('X','C'))
+## 또 다른 정답
+
+#s='AAAACCCGGT'
+#s_rev = s[::-1]
+# 
+#DNA = 'ATGC'
+#DNA_C = 'TACG' 
+#
+#print('original seqs:')
+#print(s) 
+#
+#print('reversed seqs:')
+#print(s_rev) 
+#
+#print(s_rev[0]) #T
+#print(DNA.index(s_rev[0])) 
+
+#index_first_base = DNA.index(s_rev[0])
+#print(DNA_C[index_first_base]) 
+#
+#print(DNA_C[DNA.index(s_rev[0])])
+#
+#

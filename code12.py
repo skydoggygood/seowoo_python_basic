@@ -1,0 +1,21 @@
+#! /usr/bin/env python
+num = [1,3,6,7]
+print(num)
+print(num.index(3)) #1
+num.insert(0,0)
+num.insert(3,2)
+print(num)
+print(num.pop())
+print(num.pop())
+print(num.pop())
+print(num)
+
+print(num.pop(0))
+print(num)
+
+countList = [1,1,2,1,1,3,4,4]
+print(countList.count(1)) #4
+countList.extend(num)
+print(countList)
+
+
